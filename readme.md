@@ -22,6 +22,7 @@ A Node.js application that processes images from CSV files asynchronously.
 
 ## Structure
 
+```
 root/
 ├── src/
 │   ├── config/
@@ -48,7 +49,8 @@ root/
 │   └── app.js                  # Main application file
 ├── .env                        # Environment variables
 ├── package.json                # Dependencies
-└── README.md 
+└── README.md
+```
 
 ## Prerequisites
 

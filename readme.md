@@ -91,6 +91,10 @@ npm run dev
 
 <img src="./databaseSchema.png" alt="DB Schema" width="400" height="400" align="center">
 
+## Architecture
+
+![Architecture](./architecture.png)
+
 ## API Documentation
 
 ### Upload CSV

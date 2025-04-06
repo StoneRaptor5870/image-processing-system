@@ -1,0 +1,6 @@
+/node_modules
+.env
+apiDocumentation.md
+architecture.md
+databaseSchema.md
+structure.md

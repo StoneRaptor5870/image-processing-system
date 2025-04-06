@@ -20,6 +20,36 @@ A Node.js application that processes images from CSV files asynchronously.
 - Redis (message broker)
 - Sharp (image processing)
 
+## Structure
+
+root/
+├── src/
+│   ├── config/
+│   │   ├── db.js               # Database connection
+│   │   └── redis.js            # Redis connection for Bull
+│   ├── controller/
+│   │   ├── uploadController.js # Handles file upload
+│   │   └── statusController.js # Handles status check
+│   ├── middleware/
+│   │   └── csvValidator.js     # Validates CSV format
+│   ├── models/
+│   │   ├── Request.js          # Request model
+│   │   └── Product.js          # Product model
+│   ├── service/
+│   │   ├── csvService.js       # Parses CSV
+│   │   ├── imageService.js     # Processes images
+│   │   └── webhookService.js   # Handles webhooks
+│   ├── queues/
+│   │   └── imageProcessingQueue.js # Queue for image processing
+│   ├── workers/
+│   │   └── imageProcessor.js   # Worker for processing images
+│   ├── routes/
+│   │   └── api.js              # API routes
+│   └── app.js                  # Main application file
+├── .env                        # Environment variables
+├── package.json                # Dependencies
+└── README.md 
+
 ## Prerequisites
 
 - Node.js
@@ -54,6 +84,10 @@ For development:
 ```bash
 npm run dev
 ```
+
+## Database Schema
+
+<img src="./databaseSchema.png" alt="DB Schema" width="400" height="400" align="center">
 
 ## API Documentation
 

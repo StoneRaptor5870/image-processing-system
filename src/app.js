@@ -31,7 +31,7 @@ app.use('/processed', express.static(outputDir));
 app.use('/api', apiRoutes);
 
 // webhook
-app.use('/notify', (req, res) => {
+app.use(`${process.env.WEBHOOK_ENDPOINT}`, (req, res) => {
   if (req.method === 'POST') {
     console.log('Webhook notification received: line 46 app.js', req.body);
     

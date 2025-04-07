@@ -22,7 +22,7 @@ exports.sendWebhook = async (request) => {
       }
     });
     
-    console.log('Webhook sent successfully: line 25 service', response.data);
+    console.log('Webhook sent successfully', response.data);
     return response.data;
   } catch (error) {
     console.error('Error sending webhook:', error);
